@@ -1,4 +1,0 @@
-// https://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
-// Find the element before which all the elements are smaller than it, and after which all are greater
-// Catgory: Medium 
-
