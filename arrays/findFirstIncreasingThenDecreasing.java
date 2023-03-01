@@ -22,6 +22,7 @@ public class Test{
 }
 
 // Recursive way 
+// TC: O(logN) SC: O(logN)
 // public class Test{
 //     public static int findFirstIncreasingThenDecreasing(int[] nums, int low, int high){
 //         if(low == high) return arr[high]; 
