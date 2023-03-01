@@ -38,3 +38,37 @@ public class Test{
         System.out.println(Arrays.toString(result));
     }
 }
+
+public class Test{
+    public static List<List<Integer>> findTripletsWithSumZero(int[] nums){
+        Arrays.sort(nums); 
+        List<List<Integer>> result = new ArrayList<>(); 
+        int low = 0, high = nums.length - 1;
+        while(low < high){
+            int sum = arr[low] + arr[high]; 
+            int findSum = -sum; 
+            //Apply binary search to find the element
+            int i = 0, j = arr.length - 1; 
+            while(i < j){
+                int mid = i + ((j - i) >> 1);
+                if(arr[mid] == findSum){
+                    List<Integer> triplet = new ArrayList<>(); 
+                    triplet.add(arr[low]); 
+                    triplet.add(arr[high]); 
+                    triplet.add(arr[mid]); 
+                    result.add(triplet);
+                }
+                else if(arr[mid] >  findSum) high = mid - 1; 
+                else low = mid + 1;
+            }
+            low++; high--;
+        }
+        return result;
+    }
+
+    public static void main(String... args){
+        int[] nums = {0, -1, 2, -3, 1}; 
+        List<List<Integer>> result = findTripletsWithSumZero(nums); 
+        System.out.println(Arrays.toString(result));
+    }
+}
