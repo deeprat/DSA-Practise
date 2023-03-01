@@ -1,4 +1,5 @@
 // TC: O(logN)
+// SC: O(1)
 public class Test{
     public static int findFirstIncreasingThenDecreasing(int[] arr){
         int low = 0, high = arr.length - 1; 
