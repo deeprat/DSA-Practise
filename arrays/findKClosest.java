@@ -52,3 +52,7 @@ class Solution{
         System.out.println(Arrays.toString(result));
     }
 }
+
+/*
+Output: [30, 39, 42, 45]
+ */
