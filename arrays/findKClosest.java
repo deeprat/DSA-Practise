@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution{
     public static int[] findKClosest(int[] arr, int x, int k){
         int[] result = new int[k]; 
@@ -14,7 +16,7 @@ class Solution{
         // Mid now points to the elemnent around which we have to look 
         // for the closest k elements
         int i = mid - 1, j = mid + 1, index = 0;
-        while(i >= 0 && j <= n -1 && k != 0){
+        while(i >= 0 && j <= n - 1 && k != 0){
             int absLeft = Math.abs(x - arr[i]);
             int absRight = Math.abs(x - arr[j]);
             if(absLeft < absRight){
@@ -39,11 +41,13 @@ class Solution{
             j++; 
             k = k - 1;
         }
+        // Sort the array before returning
+        Arrays.sort(result);
         return result;
     }
     public static void main(String... args){
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int x = 6, k = 3;
+        int[] nums = {12, 16, 22, 30, 35, 39, 42, 45, 48, 50, 53};
+        int x = 35, k = 4;
         int[] result = findKClosest(nums, x, k);
         System.out.println(Arrays.toString(result));
     }
