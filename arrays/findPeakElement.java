@@ -1,5 +1,6 @@
 // https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/
 // Category: Medium
+// Asked in Amazon
 
 class Solution {
     int findMaximum(int[] arr, int n) {
